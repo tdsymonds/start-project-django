@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Start-project-django by tdsymonds</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Start-project-django</h1>
+        <h2>A python script to configure a Debian/Ubuntu machine ready for a new Django project.</h2>
+        <a href="https://github.com/tdsymonds/start-project-django" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="start-project-django" class="anchor" href="#start-project-django" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>start-project-django</strong>
+</h1>
+
+<p>When I first started out learning the Django framework, I remember finding it really challenging to setup a server to host a Django project, so I've made this script to try and help people overcome this initial hurdle, so they can move straight on to the fun part, building an application. </p>
+
+<p>If you do have experience then not to worry, this script should hopefully make configuring the server very quick and easy!</p>
+
+<p>This is my preferred setup, using an Nginx, Gunicorn &amp; Django stack using Supervisor and with a MySQL DB.</p>
+
+<p><strong>This script is designed to run on a clean server, do not run on a server with existing projects, or you may lose files or get unexpected results!</strong></p>
+
+<p>I've tested this script on both Debian and Ubuntu machines.</p>
+
+<h2>
+<a id="quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Quick Start</strong>
+</h2>
+
+<p>Login as root on your clean install of an Ubuntu or Debian machine.</p>
+
+<p>Upload the start-project-django.py file via ftp (or create a new file and copy and paste the content over).</p>
+
+<p>Amend the configuration section of the python file to your settings (if you're unsure about the os_requirements and requirements then leave what I have entered for the default):</p>
+
+<pre><code>username = 'username'           # The system user that will be created
+
+db_name = 'mydb'                # The database name for our project
+db_user = 'dbuser'              # The database user for our project
+db_password = 'pass'            # The password for our database user
+
+virtualenv_name = 'venv'        # The name of the virtual environment directory
+repo_name = 'project'           # The name of the repo directory
+project_name = 'my_project'     # The name of our project
+
+domain_name = 'example.com'     # Your domain name or ip address
+
+os_requirements = [             # Any os requirements can be added and removed
+    'python-virtualenv',        # from the list.
+    'libpq-dev',
+    'python-dev',
+    'nginx',
+    'supervisor',
+    'libmysqlclient-dev', 
+    'python-mysqldb',
+    'build-essential',
+    'libjpeg-dev',
+    'mysql-server',
+]
+
+requirements = [                # Any requirements can be added and removed
+    'gunicorn==19.4.1',         # from the list.
+    'mysql-python==1.2.5',
+    'Django==1.9.0',
+    'Pillow==3.0.0',
+]
+</code></pre>
+
+<p>Run the command:</p>
+
+<pre><code>python start-project-django.py
+</code></pre>
+
+<p>The script will now run and create your project. </p>
+
+<p>NOTE: You will be prompted for passwords at a couple of points, so follow the instructions given when prompted.</p>
+
+<p>Once the script has complete, if you navigate to your domain or ip you will see the Django start page.</p>
+
+<p>Then follow the final instuctions to run the database migration to create Django's default tables in the database.</p>
+
+<p>Good luck!</p>
+
+<h2>
+<a id="useful-links" class="anchor" href="#useful-links" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Useful links</strong>
+</h2>
+
+<p>Some links that you may find useful:</p>
+
+<p><a href="https://docs.djangoproject.com/en/1.9/intro/tutorial01/">https://docs.djangoproject.com/en/1.9/intro/tutorial01/</a></p>
+
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps">https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/tdsymonds/start-project-django/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/tdsymonds/start-project-django/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/tdsymonds/start-project-django"></a> is maintained by <a href="https://github.com/tdsymonds">tdsymonds</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-71630086-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
