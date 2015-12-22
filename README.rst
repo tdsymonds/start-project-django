@@ -15,7 +15,7 @@ Quick Start
 -----------
 1. Login as root on your clean install of an Ubuntu or Debian machine.
 2. Upload the start-project-django.py file via ftp (or create a new file and copy and paste the content over).
-3. Amend the configuration section of the python file to your settings (if you're unsure about the os_requirements and requirements then leave what I have entered for the default):
+3. Amend the configuration section of the python file to your settings (if you're unsure about the os_requirements and requirements then leave what I have entered for the default)::
 
   username = 'username'           # The system user that will be created
 
@@ -50,7 +50,7 @@ Quick Start
   ]
 
 
-4. Run the command:
+4. Run the command::
   python start-project-django.py
 
 The script will now run and create your project. 
