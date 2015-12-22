@@ -13,9 +13,12 @@ I've tested this script on both Debian and Ubuntu machines.
 
 Quick Start
 -----------
-1. Login as root on your clean install of an Ubuntu or Debian machine.
-2. Upload the start-project-django.py file via ftp (or create a new file and copy and paste the content over).
-3. Amend the configuration section of the python file to your settings (if you're unsure about the os_requirements and requirements then leave what I have entered for the default)::
+
+Login as root on your clean install of an Ubuntu or Debian machine.
+
+Upload the start-project-django.py file via ftp (or create a new file and copy and paste the content over).
+
+Amend the configuration section of the python file to your settings (if you're unsure about the os_requirements and requirements then leave what I have entered for the default)::
 
   username = 'username'           # The system user that will be created
 
@@ -50,15 +53,18 @@ Quick Start
   ]
 
 
-4. Run the command::
+
+Run the command::
+
   python start-project-django.py
 
 The script will now run and create your project. 
 
 NOTE: You will be prompted for passwords at a couple of points, so follow the instructions given when prompted.
 
-5. Once the script has complete, if you navigate to your domain or ip you will see the Django start page.
-6. Then follow the final instuctions to run the database migration to create Django's default tables in the database.
+Once the script has complete, if you navigate to your domain or ip you will see the Django start page.
+
+Then follow the final instuctions to run the database migration to create Django's default tables in the database.
 
 Good luck!
 
