@@ -75,5 +75,6 @@ Useful links
 Some links that you may find useful:
 
 https://docs.djangoproject.com/en/1.9/intro/tutorial01/
+
 https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
 
